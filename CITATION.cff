@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or the associated paper, please cite it as below."
+title: "SurvivalPFN: Amortizing Survival Prediction via In-Context Bayesian Inference"
+authors:
+  - family-names: Qi
+    given-names: Shi-ang
+  - family-names: Balazadeh
+    given-names: Vahid
+  - family-names: Cooper
+    given-names: Michael
+  - family-names: Greiner
+    given-names: Russell
+  - family-names: Krishnan
+    given-names: Rahul G.
+year: 2026
+url: "https://github.com/rgklab/SurvivalPFN"
+preferred-citation:
+  type: article
+  title: "SurvivalPFN: Amortizing Survival Prediction via In-Context Bayesian Inference"
+  authors:
+    - family-names: Qi
+      given-names: Shi-ang
+    - family-names: Balazadeh
+      given-names: Vahid
+    - family-names: Cooper
+      given-names: Michael
+    - family-names: Greiner
+      given-names: Russell
+    - family-names: Krishnan
+      given-names: Rahul G.
+  year: 2026
+  journal: "arXiv preprint"
