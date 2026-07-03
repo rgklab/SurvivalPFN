@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - /meta_dataset@train_meta_dataset: survival_dist_prior
+  - _self_
+  - override /model@model: tabdpt_long_context # use a fresh model
+
+train_meta_dataset:
+  device: cpu
+  n_samples: 2048

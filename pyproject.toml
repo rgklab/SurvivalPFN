@@ -1,0 +1,12 @@
+[tool.isort]
+skip = [
+        "venv/",
+        "survivalpfn_env/",
+        ".pytest_cache/",
+        "tests/conftest.py",
+]
+
+[tool.black]
+line-length = 120
+include = '\.py$'
+exclude = '/venv/|/survivalpfn_env/|/\.pytest_cache/'

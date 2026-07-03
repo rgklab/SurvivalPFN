@@ -1,0 +1,12 @@
+_target_: survivalpfn.callbacks.EvalSurvival
+test_ratio: 0.3
+seed: 183742
+eval_datasets_names: null
+
+callback_name: eval_survival
+frequency: 1
+survival_estimator_partial:
+  _target_: survivalpfn.survival_estimator.SurvivalEstimator
+  _partial_: true
+  model_path: null # the transformations used for the model
+  device: ${default_device}

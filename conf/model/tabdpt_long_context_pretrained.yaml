@@ -1,0 +1,23 @@
+# @package _global_
+defaults:
+  - _self_
+
+model:
+  path: output/checkpoints/tabdpt_long_context/tabdpt_long_context.ckpt
+  obj:
+    _target_: survivalpfn.models.InContextModel
+    sigma: ${sigma}
+    vmin: ${vmin}
+    vmax: ${vmax}
+    query_strategy: ${query_strategy}
+    time_transform: ${time_transform}
+    model:
+      _target_: survivalpfn.models.load_pretrained_tabdpt_model
+      ckpt_path: ${...path}
+    model_config:
+      _target_: survivalpfn.models.load_pretrained_tabdpt_config
+      ckpt_path: ${...path}
+trainer:
+  batch_size: 32
+  num_agg: 8
+compile: true

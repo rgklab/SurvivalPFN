@@ -1,0 +1,30 @@
+defaults:
+  - /table_generator@covariates_generator: tabdpt
+  - /table_generator@event_censoring_coefficient_generator: tabdpt
+  - _self_
+
+_target_: survivalpfn.prior.SurvivalDistributionPrior
+
+
+t_max_dist:
+  _target_: survivalpfn.prior.DeepTruncNormLogScaledSampler
+  mean_max: 1000
+  mean_min: 5
+  is_int: false
+  min_val: 1
+
+n_knot_dist:
+  _target_: survivalpfn.prior.DeepTruncNormLogScaledSampler
+  mean_max: 32
+  mean_min: 8
+  is_int: true
+  min_val: 4
+
+
+max_n_covariates: 99
+layer_norm_covariates_prob: 0.5
+
+n_samples: 2048
+post_padding_n_cols: 99
+device: cpu
+name: survival_dist_prior

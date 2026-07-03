@@ -1,0 +1,12 @@
+defaults:
+  - /table_generator@table_generators.d1: tabdpt
+  - _self_
+
+
+_target_: survivalpfn.prior.table_generators.KitchenSinkTableGenerator
+
+device: cpu
+seed: 123456
+
+categorical_probabilities:
+  - 1.0

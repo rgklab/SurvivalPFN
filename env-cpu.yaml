@@ -1,0 +1,31 @@
+name: survivalpfn_cpu
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.11.8
+  - scipy
+  - tqdm
+  - pytorch==2.5.1
+  - cpuonly
+  - scikit-learn
+  - pandas
+  - hydra-core
+  - wandb
+  - pytest
+  - pytest-cov
+  - black
+  - isort
+  - matplotlib
+  - packaging
+  - ninja
+  - h5py
+  - lifelines
+  - schedulefree
+  - huggingface_hub
+
+  - pip:
+      - SurvSet
+      - SurvivalEVAL

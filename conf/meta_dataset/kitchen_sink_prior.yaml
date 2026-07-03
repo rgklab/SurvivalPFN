@@ -1,0 +1,15 @@
+defaults:
+  - /meta_dataset@priors.d1: naive_prior
+  - /meta_dataset@priors.d2: survival_dist_prior
+  - /meta_dataset@priors.d3: mixture_prior
+  - _self_
+
+_target_: survivalpfn.prior.KitchenSinkPrior
+
+seed: 123456
+
+# Sampling probabilities for each prior when generating training data.
+categorical_probabilities:
+  - 0.5  # naive_prior: Simple baseline distributions
+  - 0.5  # survival_dist_prior: Bernstein polynomial-based distributions
+  - 0.0   # mixture_prior: Mixture of parametric distributions (Weibull/LogNormal)

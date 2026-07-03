@@ -1,0 +1,10 @@
+defaults:
+  - _self_
+
+_target_: survivalpfn.callbacks.Checkpoint
+callback_name: checkpoint
+frequency: 1
+top_k: 2
+monitor: avg_integrated_brier
+output_path: ${out_dir}/checkpoints/
+checkpoint_dir_name: null # automatically generate

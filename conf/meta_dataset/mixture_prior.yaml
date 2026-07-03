@@ -1,0 +1,14 @@
+defaults:
+  - /table_generator@covariates_generator: tabdpt
+  - /table_generator@event_censoring_generator: tabdpt
+  - _self_
+
+_target_: survivalpfn.prior.MixtureModelSurvivalPrior
+
+max_n_covariates: 99
+layer_norm_covariates_prob: 0.5
+
+n_samples: 2048
+post_padding_n_cols: 99
+device: cpu
+name: mixture_model_prior

@@ -1,0 +1,9 @@
+max_epochs: 2048
+num_model_updates: 128
+
+grad_clip: 1.0
+
+min_train_data_split: 0.7
+max_train_data_split: 0.7
+n_buckets: 1
+ # Fixed 70/30 context-query split for the selected paper checkpoint.

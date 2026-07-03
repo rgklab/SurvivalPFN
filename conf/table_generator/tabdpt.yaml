@@ -1,0 +1,45 @@
+_target_: survivalpfn.prior.table_generators.TabDPTTableGenerator
+
+device: cpu
+
+n_layer_dist:
+  _target_: survivalpfn.prior.DeepTruncNormLogScaledSampler
+  mean_max: 10
+  mean_min: 1
+  is_int: true
+  min_val: 2
+
+n_hidden_dist:
+  _target_: survivalpfn.prior.DeepTruncNormLogScaledSampler
+  mean_max: 50
+  mean_min: 5
+  is_int: true
+  min_val: 4
+
+dense_prob_dist:
+  _target_: survivalpfn.prior.UniformSampler
+  low: 1
+  high: 1
+
+init_std_dist:
+  _target_: survivalpfn.prior.DeepTruncNormLogScaledSampler
+  mean_max: 3.0
+  mean_min: 0.01
+  is_int: false
+  min_val: 0.0
+
+noise_std_dist:
+  _target_: survivalpfn.prior.DeepTruncNormLogScaledSampler
+  mean_max: 0.5
+  mean_min: 0.0001
+  is_int: false
+  min_val: 0.0
+
+n_block_max_dist: null
+in_clique_prob: 0.5
+outcome_after_covariates_prob: 0.5
+
+categorical_columns_prob: 0.5
+categorical_columns_ordered_prob: 0.5
+
+pre_sample_prob: 0.5

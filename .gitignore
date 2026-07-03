@@ -1,56 +1,33 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
+.ipynb_checkpoints
+.pytest_cache/
+.ruff_cache/
 
-# Virtual environments
-.env
-.venv
-env/
+# Environments
 venv/
-ENV/
+.env
+.cache
 
-# Jupyter
-.ipynb_checkpoints/
-
-# PyTorch / model artifacts
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-
-# Logs and experiment tracking
-*.log
-wandb/
-mlruns/
-lightning_logs/
+# Runs and outputs
+output/
 outputs/
-multirun/
+logs/
+wandb/
+!conf/wandb/
+notebook_output*
+**/temp/**
+**/.temp**
+tmp/
+.tmp*
+.coverage*
 
-# Editor / OS
-.idea/
+# Model checkpoints
+*.pt
+
+# Editor / local config
 .vscode/
-.DS_Store
-Thumbs.db
-
-# Local data
-data/
-datasets/
+.claude/
+**/CLAUDE.local.md
